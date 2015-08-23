@@ -19,6 +19,9 @@ use PayPal\Api\ExecutePayment;
 use PayPal\Api\PaymentExecution;
 use PayPal\Api\Transaction;
 
+use App\Order;
+use App\OrderItem;
+
 class PaypalController extends BaseController
 {
 	private $_api_context;
@@ -153,9 +156,9 @@ class PaypalController extends BaseController
 			// Enviar correo a admin
 			// Redireccionar
 
-			//$this->saveOrder();
+			$this->saveOrder(\Session::get('cart'));
 
-			//\Session::forget('cart');
+			\Session::forget('cart');
 
 
 			return \Redirect::route('home')
@@ -163,6 +166,35 @@ class PaypalController extends BaseController
 		}
 		return \Redirect::route('home')
 			->with('message', 'La compra fue cancelada');
+	}
+
+
+	private function saveOrder($cart)
+	{
+	    $subtotal = 0;
+	    foreach($cart as $item){
+	        $subtotal += $item->price * $item->quantity;
+	    }
+	    
+	    $order = Order::create([
+	        'subtotal' => $subtotal,
+	        'shipping' => 100,
+	        'user_id' => \Auth::user()->id
+	    ]);
+	    
+	    foreach($cart as $item){
+	        $this->saveOrderItem($item, $order->id);
+	    }
+	}
+	
+	private function saveOrderItem($item, $order_id)
+	{
+		OrderItem::create([
+			'quantity' => $item->quantity,
+			'price' => $item->price,
+			'product_id' => $item->id,
+			'order_id' => $order_id
+		]);
 	}
 
 

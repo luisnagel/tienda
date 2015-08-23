@@ -39,7 +39,7 @@
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-users  icon-home"></i>
-                    <a href="#" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
+                    <a href="{{ route('admin.user.index') }}" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
                 </div>
             </div>
                     
