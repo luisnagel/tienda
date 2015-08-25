@@ -114,17 +114,33 @@ Route::get('payment/status', array(
 
 // ADMIN -------------
 
-Route::get('admin/home', function(){
-	return view('admin.home');
+Route::group(['namespace' => 'Admin', 'middleware' => ['auth'], 'prefix' => 'admin'], function()
+{
+
+	Route::get('home', function(){
+		return view('admin.home');
+	});
+
+	Route::resource('category', 'CategoryController');
+
+	Route::resource('product', 'ProductController');
+
+	Route::resource('user', 'UserController');
+
+	Route::get('orders', [
+		'as' => 'admin.order.index',
+		'uses' => 'OrderController@index'
+	]);
+
+	Route::post('order/get-items', [
+	    'as' => 'admin.order.getItems',
+	    'uses' => 'OrderController@getItems'
+	]);
+
+	Route::get('order/{id}', [
+	    'as' => 'admin.order.destroy',
+	    'uses' => 'OrderController@destroy'
+	]);
+
 });
-
-Route::resource('admin/category', 'Admin\CategoryController');
-
-Route::resource('admin/product', 'Admin\ProductController');
-
-Route::resource('admin/user', 'Admin\UserController');
-
-
-
-
 

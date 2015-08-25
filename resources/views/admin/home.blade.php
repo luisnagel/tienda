@@ -32,7 +32,7 @@
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-cc-paypal  icon-home"></i>
-                    <a href="#" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
+                    <a href="{{ route('admin.order.index') }}" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
                 </div>
             </div> 
             
