@@ -12,7 +12,7 @@
           <table class="table table-stripped table-bordered table-hover" id="table-detalle-pedido">
             <thead>
               <tr>
-                <th>Imagen</th>
+                <!--<th>Imagen</th>-->
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>Cantidad</th>

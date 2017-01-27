@@ -3,7 +3,7 @@
 @section('content')
 	<div class="container text-center">
 		<div class="page-header">
-		  <h1><i class="fa fa-shopping-cart"></i> Carrito de compras</h1>
+		  <h1><i class="fa fa-shopping-cart"></i> Pedido</h1>
 		</div>
 
 		<div class="table-cart">
@@ -11,7 +11,7 @@
 
 			<p>
 				<a href="{{ route('cart-trash') }}" class="btn btn-danger">
-					Vaciar carrito <i class="fa fa-trash"></i>
+					Vaciar Pedido<i class="fa fa-trash"></i>
 				</a>
 			</p>
 
@@ -69,7 +69,7 @@
 
 			</div>
 			@else
-				<h3><span class="label label-warning">No hay productos en el carrito :(</span></h3>
+				<h3><span class="label label-warning">No hay pedido realizado</span></h3>
 			@endif
 			<hr>
 			<p>

@@ -4,10 +4,8 @@
 
     <div class="container text-center">
         <div class="page-header">
-            <h1><i class="fa fa-rocket"></i> MY LARAVEL STORE - DASHBOARD</h1>
-        </div>
-        
-        <h2>Bienvenido(a) {{ Auth::user()->user }} al Panel de administración de tu tienda en línea.</h2><hr>
+            <h1>Panel de administración</h1>
+        </div>  
         
         <div class="row">
             
@@ -31,7 +29,7 @@
             
             <div class="col-md-6">
                 <div class="panel">
-                    <i class="fa fa-cc-paypal  icon-home"></i>
+                    <i class="fa fa-pencil-square-o icon-home"></i>
                     <a href="{{ route('admin.order.index') }}" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
                 </div>
             </div> 
