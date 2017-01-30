@@ -26,7 +26,7 @@
 					    </div>
 
 					    <div class="form-group">
-					        <input type="checkbox" name="remember"> Remember Me
+					        <input type="checkbox" name="remember"> Recordar
 					    </div>
 
 					    <div class="form-group">
