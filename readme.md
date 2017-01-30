@@ -1,4 +1,4 @@
-#Tienda en línea con Bootstrap, Laravel 5.1 y la API de Paypal
+#Tienda de pedidos
 
 ## Laravel PHP Framework
 
