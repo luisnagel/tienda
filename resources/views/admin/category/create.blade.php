@@ -51,11 +51,11 @@
                             !!}
                         </div>
                         
-                        <div class="form-group">
+                      <!--  <div class="form-group">
                             <label for="color">Color:</label>
                             
                             <input type="color" name="color" class="form-control">
-                        </div>
+                        </div> -->
                         
                         <div class="form-group">
                             {!! Form::submit('Guardar', array('class'=>'btn btn-primary')) !!}

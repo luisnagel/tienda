@@ -45,7 +45,7 @@
 						Volver
 					</a>
 
-					<a href="{{ route('payment') }}" class="btn btn-warning">
+					<a href="{{ route('pedido.create') }}" class="btn btn-warning">
 						Pedir
 					</a>
 				</p>

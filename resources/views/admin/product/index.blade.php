@@ -28,7 +28,7 @@
                             <th>Visible</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-left">
                         @foreach($products as $product)
                             <tr>
                                 <td>

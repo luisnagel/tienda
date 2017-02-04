@@ -14,7 +14,7 @@
 		</a>
 		<ul class="dropdown-menu" role="menu">
 			<li><a href="{{ route('login-get') }}">Iniciar sesión</a></li>
-			<!--<li><a href="{{ route('register-get') }}">Registrarse</a></li>-->
+			<li><a href="{{ route('register-get') }}">Registrar</a></li>
 		</ul>
 	</li>
 @endif

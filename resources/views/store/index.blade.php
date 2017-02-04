@@ -6,6 +6,7 @@
 
 
 
+
 				<table class="table table-striped table-hover table-bordered">
 					<tr>
 						<th>Producto</th>
@@ -26,12 +27,7 @@
 						</tr>
 					@endforeach
 				</table><hr>
-
-
-
 </div>
-
-
 
 
 

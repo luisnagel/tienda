@@ -31,7 +31,7 @@ class CartController extends Controller
     	$cart[$product->slug] = $product;
     	\Session::put('cart', $cart);
 
-    	return redirect()->route('cart-show');
+    	return redirect()->route('home');
     }
 
     // Delete item

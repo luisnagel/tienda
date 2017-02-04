@@ -18,10 +18,10 @@
 							<th>Eliminar</th>
 							<th>Nombre</th>
 							<th>Descripción</th>
-							<th>Color</th>
+							<!--<th>Color</th>-->
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="text-left">
 						@foreach($categories as $category)
 							<tr>
 								<td>
@@ -39,7 +39,7 @@
 								</td>
 								<td>{{ $category->name }}</td>
 								<td>{{ $category->description }}</td>
-								<td>{{ $category->color }}</td>
+								<!--<td>{{ $category->color }}</td>-->
 							</tr>
 						@endforeach
 					</tbody>

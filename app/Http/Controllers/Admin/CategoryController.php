@@ -44,14 +44,14 @@ class CategoryController extends Controller
 
         $this->validate($request, [
           'name' => 'required|unique:categories|max:255',
-          'color' => 'required',
+          //'color' => 'required',
         ]);
         
         $category = Category::create([
             'name' => $request->get('name'),
             'slug' => str_slug($request->get('name')),
             'description' => $request->get('description'),
-            'color' => $request->get('color')
+            //'color' => $request->get('color')
         ]);
         
         $message = $category ? 'Categoría agregada correctamente!' : 'La Categoría NO pudo agregarse!';
@@ -91,7 +91,7 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
           'name' => 'required|max:255',
-          'color' => 'required',
+          //'color' => 'required',
         ]);
 
         $category->fill($request->all());
