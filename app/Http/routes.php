@@ -103,6 +103,7 @@ Route::resource('pedido', 'Auth\PedidoController');
 
 
 
+
 // ADMIN -------------
 
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth'], 'prefix' => 'admin'], function()

@@ -50,6 +50,7 @@ class PedidoController extends Controller
         foreach($cart as $item){
             $this->saveOrderItem($item, $order->id);
         }
+        //return \Redirect::route('cart-trash');
         return \Redirect::route('home')
         ->with('message', 'Pedido realizado de forma correcta');
         
@@ -63,6 +64,8 @@ class PedidoController extends Controller
             'product_id' => $item->id,
             'order_id' => $order_id
         ]);
+
+        //return \Redirect::route('cart-trash');
     }
     
 
@@ -119,6 +122,14 @@ class PedidoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = Order::findOrFail($id);
+        
+        dd($order);
+
+        //$deleted = $order->delete();
+        
+        //$message = $deleted ? 'Pedido eliminado correctamente!' : 'El Pedido NO pudo eliminarse!';
+        
+        //return redirect()->route('admin.order.index')->with('message', $message);
     }
 }

@@ -13,7 +13,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-    	$orders = Order::orderBy('id', 'desc')->paginate(5);
+    	$orders = Order::orderBy('id', 'desc')->paginate(100);
     	//dd($orders);
     	return view('admin.order.index', compact('orders'));
     } 
@@ -26,12 +26,16 @@ class OrderController extends Controller
 
     public function destroy($id)
     {
-        $order = Order::findOrFail($id);
+        return view('admin.order.index', compact('orders')); 
+
+        //$order = Order::findOrFail($id);
         
-        $deleted = $order->delete();
+        //dd($orders);
+
+        //$deleted = $order->delete();
         
-        $message = $deleted ? 'Pedido eliminado correctamente!' : 'El Pedido NO pudo eliminarse!';
+        //$message = $deleted ? 'Pedido eliminado correctamente!' : 'El Pedido NO pudo eliminarse!';
         
-        return redirect()->route('admin.order.index')->with('message', $message);
+        //return redirect()->route('admin.order.index')->with('message', $message);
     }
 }

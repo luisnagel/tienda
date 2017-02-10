@@ -25,6 +25,7 @@
                     </thead>
                     <tbody class="text-left">
                         @foreach($orders as $order)
+
                             <tr>
                                 <td>
                                     <a 
@@ -40,7 +41,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    {!! Form::open(['route' => ['admin.order.destroy', $order->id]]) !!}
+                                    {!! Form::open(['route' => ['admin.order.index', $order->id]]) !!}
         								<button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
         									<i class="fa fa-trash-o"></i>
         								</button>
