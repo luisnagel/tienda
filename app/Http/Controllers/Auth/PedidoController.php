@@ -1,11 +1,12 @@
 <?php
 
+
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Auth\Controller;
 use App\Order;
 use App\OrderItem;
 

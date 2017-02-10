@@ -28,17 +28,17 @@ Route::bind('user', function($user){
 
 Route::get('/', [
 	'as' => 'home',
-	'uses' => 'StoreController@redirect'
+	'uses' => 'Auth\StoreController@redirect'
 ]);
 Route::get('home', [
 	'as' => 'home',
-	'uses' => 'StoreController@index'
+	'uses' => 'Auth\StoreController@index'
 ]);
 
 Route::get('product/{slug}', [
 	
 	'as' => 'product-detail',
-	'uses' => 'StoreController@show'
+	'uses' => 'Auth\StoreController@show'
 ]);
 
 // Carrito -------------
@@ -46,31 +46,31 @@ Route::get('product/{slug}', [
 Route::get('cart/show', [
 	
 	'as' => 'cart-show',
-	'uses' => 'CartController@show'
+	'uses' => 'Auth\CartController@show'
 ]);
 
 Route::get('cart/add/{product}', [
 	
 	'as' => 'cart-add',
-	'uses' => 'CartController@add'
+	'uses' => 'Auth\CartController@add'
 ]);
 
 Route::get('cart/delete/{product}',[
 	
 	'as' => 'cart-delete',
-	'uses' => 'CartController@delete'
+	'uses' => 'Auth\CartController@delete'
 ]);
 
 Route::get('cart/trash', [
 	
 	'as' => 'cart-trash',
-	'uses' => 'CartController@trash'
+	'uses' => 'Auth\CartController@trash'
 ]);
 
 Route::get('cart/update/{product}/{quantity}', [
 	
 	'as' => 'cart-update',
-	'uses' => 'CartController@update'
+	'uses' => 'Auth\CartController@update'
 ]);
 
 Route::get('order-detail', [
