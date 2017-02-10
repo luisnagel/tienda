@@ -26,8 +26,6 @@ class OrderController extends Controller
 
     public function destroy($id)
     {
-        return view('admin.order.index', compact('orders')); 
-
         //$order = Order::findOrFail($id);
         
         //dd($orders);

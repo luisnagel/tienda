@@ -15,7 +15,7 @@
                     <thead>
                         <tr>
                             <th>Ver Detalle</th>
-                            <th>Eliminar</th>
+                            <!--<th>Eliminar</th>-->
                             <th>Fecha</th>
                             <th>Usuario</th>
                             <th>Total</th>
@@ -40,12 +40,12 @@
                                         <i class="fa fa-external-link"></i>
                                     </a>
                                 </td>
-                                <td>
+                               <!-- <td>
                                     {!! Form::open(['route' => ['admin.order.index', $order->id]]) !!}
         								<button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
         									<i class="fa fa-trash-o"></i>
         								</button>
-        							{!! Form::close() !!}
+        							{!! Form::close() !!}-->
                                 </td>
                                 <td>{{ $order->created_at }}</td>
                                 <td>{{ $order->user->name . " " . $order->user->last_name }}</td>

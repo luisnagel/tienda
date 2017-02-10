@@ -9,13 +9,13 @@
       </button>
       <a class="navbar-brand main-title" href="{{ route('home') }}"><!--tituto de la tienda--></a>
     </div>
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <p class="navbar-text"><!--tituto de la tienda--></p>
       <ul class="nav navbar-nav navbar-right">
+        <li>Total: ${{ number_format($total,2) }}</li>
         <li><a href="{{ route('cart-show') }}"><i class="fa fa-shopping-cart"></i></a></li>
         <li><a href="#"><!--links--></a></li>
-        <li><a href="#"><!--links--></a></li>
+        
         @include('store.partials.menu-user')
       </ul>
     </div>

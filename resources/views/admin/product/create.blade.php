@@ -1,5 +1,6 @@
 @extends('admin.template')
 
+
 @section('content')
 	
 	<div class="container text-center">

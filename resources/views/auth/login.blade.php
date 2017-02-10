@@ -1,4 +1,4 @@
-@extends('store.template')
+@extends('store.templatelog')
 
 @section('content')
 	<div class="container text-center">
